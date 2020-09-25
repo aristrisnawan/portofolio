@@ -36,7 +36,7 @@ const useStyle = makeStyles((theme) => ({
 function Home() {
     const classes = useStyle()
     return (
-        <div className={classes.root} style={{backgroundImage:`url(${Gambar})`}}>
+        <div id="Home" className={classes.root} style={{backgroundImage:`url(${Gambar})`}}>
             <Container component="main" maxWidth="xs" >
                 <div className={classes.paper}>
                 <Typography variant="h3" className={classes.typ} >

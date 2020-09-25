@@ -1,24 +1,41 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
 import Aris from '../img/aris.jpg';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyle = makeStyles((theme) => ({
+    txt:{
+        textAlign:"center",
+        backgroundColor: "#e8eaf6",
+    },
+    typ:{
+        marginTop:theme.spacing(4),
+        marginBottom:theme.spacing(4)
+    },
+    topbtm:{
+        marginBottom:theme.spacing(5)
+    }
+}))
 
 function About() {
+    const classes = useStyle()
     return (
-        <div>
-            <Typography variant="h6" >
+        <div className={classes.txt} id="About">
+            <Typography variant="h6" className={classes.typ}>
                 About
             </Typography>
-            <Grid container spacing={2}>
-                <Grid item xs={6}>
-                <img src={Aris}/>
-                </Grid>
-                <Grid item xs={6}>
-                    sjrfiodsjg
-                </Grid>
-            </Grid>
+            <Typography >
+                My Name Aris Trisnawan
+            </Typography>
+            <Typography>
+                Born Ciamis, 25 Agustus 1998
+            </Typography>
+            <Typography>
+                Life in Bandung
+            </Typography>
+            <Typography >
+                Student Telkom University
+            </Typography>
         </div>
     )
 }

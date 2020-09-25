@@ -33,7 +33,7 @@ const style = makeStyles((theme) => ({
 function project() {
     const classes = style()
     return (
-        <div>
+        <div id="project">
             <Typography variant="h6" className={classes.typ}>
                 This My Project
             </Typography>
