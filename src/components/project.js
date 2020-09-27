@@ -20,14 +20,44 @@ const style = makeStyles((theme) => ({
         margin:theme.spacing(0,2,0,2)
     },
     gmbr: {
-        width: "100%",
-        height: "100%"
+        height: "100%",
+        display: "block",
+        margin: "auto"
     },
     typGrid:{
         textAlign:"center",
+    },
+    containerImg: {
+        height: 250
     }
 }))
 
+const myProject = [
+    {
+        title: 'Website',
+        image: Web
+    },
+    {
+        title: 'Mobile Marketing',
+        image: Web1
+    },
+    {
+        title: 'Website',
+        image: Undraw1
+    }
+]
+
+
+// WEBNYA KEREN RISS
+
+// Biasanya begini aturannya
+// max value: 12
+
+// xs: mobile
+// sm: mobile
+// md: mobile/tablet
+// lg: desktop
+// xl: desktop
 
 
 function project() {
@@ -38,42 +68,18 @@ function project() {
                 This My Project
             </Typography>
             <Grid container spacing={2} className={classes.grd}>
-                <Grid item xs={4} >
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Website</b></Typography>
-                <img src={Web} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Mobile Marketing</b></Typography>
-                <img src={Undraw1} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Website</b></Typography>
-                <img src={Web} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Website</b></Typography>
-                <img src={Mobile} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Website</b></Typography>
-                <img src={Mobile1} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
-                <Grid item xs={4}>
-                <Paper>
-                <Typography variant="h6" className={classes.typGrid}><b>Website</b></Typography>
-                <img src={Mobile2} className={classes.gmbr}/>
-                </Paper>
-                </Grid>
+                {
+                    myProject.map((data, index) => (
+                        <Grid item xs={12} sm={12} md={6} lg={4} key={index} >
+                            <Paper>
+                                <Typography variant="h6" className={classes.typGrid}><b>{data.title}</b></Typography>
+                                <div className={classes.containerImg}>
+                                    <img src={data.image} className={classes.gmbr}/>
+                                </div>
+                            </Paper>
+                        </Grid>
+                    ))
+                }
             </Grid>
         </div>
     )

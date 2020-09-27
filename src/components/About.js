@@ -7,10 +7,12 @@ const useStyle = makeStyles((theme) => ({
     txt:{
         textAlign:"center",
         backgroundColor: "#e8eaf6",
+        paddingTop:theme.spacing(4),
+        paddingBottom:theme.spacing(4)
     },
     typ:{
-        marginTop:theme.spacing(4),
-        marginBottom:theme.spacing(4)
+        // marginTop:theme.spacing(4),
+        // marginBottom:theme.spacing(4)
     },
     topbtm:{
         marginBottom:theme.spacing(5)

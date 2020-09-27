@@ -31,21 +31,21 @@ function Header() {
     return (
         <div className={classes.root}>
             <Router>
-            <AppBar position="static" className={classes.App}>
+            <AppBar position="fixed" className={classes.App}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         Aris Trisnawan
                     </Typography>
-                    <Route className={classes.lnk}  path={"/home"} component={About}>
+                    <a className={classes.lnk} href="#Home">
                     <Button className={classes.btm}>
                         Home
                     </Button>
-                    </Route>
-                    <Link className={classes.lnk} to="#About">
+                    </a>
+                    <a className={classes.lnk} href="#About">
                     <Button className={classes.btm}>
                         About
                     </Button>
-                    </Link>
+                    </a>
                     <Link className={classes.lnk}>
                     <Button className={classes.btm}>
                       Contact
