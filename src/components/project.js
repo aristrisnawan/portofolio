@@ -44,6 +44,17 @@ const myProject = [
     {
         title: 'Website',
         image: Undraw1
+    },{
+        title: 'Mobile',
+        image: Mobile1
+    },
+    {
+        title: 'Mobile',
+        image: Mobile2
+    },
+    {
+        title: 'Mobile',
+        image: Mobile
     }
 ]
 
@@ -63,7 +74,7 @@ const myProject = [
 function project() {
     const classes = style()
     return (
-        <div id="project">
+        <div id="Project">
             <Typography variant="h6" className={classes.typ}>
                 This My Project
             </Typography>

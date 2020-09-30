@@ -46,11 +46,11 @@ function Header() {
                         About
                     </Button>
                     </a>
-                    <Link className={classes.lnk}>
+                    <a className={classes.lnk} href="#Footer">
                     <Button className={classes.btm}>
                       Contact
                     </Button>
-                    </Link>
+                    </a>
                 </Toolbar>
             </AppBar>
             </Router>

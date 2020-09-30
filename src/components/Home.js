@@ -5,7 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Gambar from '../img/dev.jpg';
 import Button from '@material-ui/core/Button';
-
+import Text from 'react-text-typing';
+import Typical from 'react-typical';
+// import TypeText from 'react-typing-text'
+// import 'react-typing-text/dist/index.css'
 
 const useStyle = makeStyles((theme) => ({
     root: {
@@ -19,7 +22,7 @@ const useStyle = makeStyles((theme) => ({
         alignItems: "center"
     },
     typ: {
-        marginTop: theme.spacing(11),
+        marginTop: theme.spacing(20),
         position:"sticky",
         color: "#fff",
         fontFamily: theme.typography.fontFamily
@@ -30,6 +33,9 @@ const useStyle = makeStyles((theme) => ({
     btm: {
         backgroundColor:"#fff",
         marginTop: theme.spacing(5)
+    },
+    lnk:{
+        textDecoration: "none"
     }
 }))
 
@@ -41,12 +47,20 @@ function Home() {
                 <div className={classes.paper}>
                 <Typography variant="h3" className={classes.typ} >
                     My name Aris <br/>
-                    I'm <span className={classes.wrn}><b>Developer</b></span>
+                    I'm  &nbsp;
+                 <Typical
+                    steps={['Developer', 1000, 'Designer', 500]}
+                    loop={Infinity}
+                    wrapper="b"
+                    className={classes.wrn}
+                />
                 </Typography>
                 </div>
+                <a href="#Project" className={classes.lnk}>
                 <Button variant="outlined" color="primary" className={classes.btm}>
                     View Project
                 </Button>
+                </a>
             </Container>
         </div>
     )
